@@ -1,7 +1,7 @@
 #ifndef VANILLA_OPTION_H
 #define VANILLA_OPTION_H
 
-
+#include <cmath>
 
 class VanillaOption {
   
@@ -33,7 +33,7 @@ public:
 
   //Parameter constructor
   VanillaOption(const double & _K, const double & _R, const double & _T,
-                const double & _S, const double & _Sigma);
+                const double & _S, const double & _sigma);
 
   //Copy Constructor
   VanillaOption(const VanillaOption & target);
@@ -44,15 +44,15 @@ public:
   //Destructor
   virtual ~VanillaOption();
 
-  double getK();
+  double getK() const;
 
-  double getR();
+  double getR() const;
 
-  double getT();
+  double getT() const;
 
-  double getS();
+  double getS() const;
 
-  double getSigma();
+  double getSigma() const;
 
   // Option price calculation method
 
@@ -64,6 +64,11 @@ public:
 };
 
 
+
+//standard normal CDF using the C++ Standard Library's erf function
+double N(double a) {
+    return 0.5 * (1 + std::erf(a / std::sqrt(2.0)));
+}
 
 
 
