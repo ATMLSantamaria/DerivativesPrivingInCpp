@@ -63,5 +63,19 @@ double VanillaOption::calculate_call_price() const {
 
 }
 
+double VanillaOption::calculate_put_price() const {
+
+  double sigma_sqrt_T = sigma * sqrt(T);
+
+  double d1 = ( log(S/k) + (r + sigma*sigma*0.5)*T);
+
+  double d2 = d1 - sigma_sqrt_T;
+
+  return k*exp(-r*T)*N(-d2)-S*N(-d1);
+
+  return 0.0;
+
+}
+
 
 #endif
