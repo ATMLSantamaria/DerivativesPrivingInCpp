@@ -56,9 +56,9 @@ public:
 
   // Option price calculation method
 
-  double calculate_call_price();
+  double calculate_call_price() const;
 
-  double calculate_put_price();
+  double calculate_put_price() const;
 
 
 };
