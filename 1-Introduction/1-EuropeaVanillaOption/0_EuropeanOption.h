@@ -1,5 +1,4 @@
-#ifndef VANILLA_OPTION_H
-#define VANILLA_OPTION_H
+#pragma once
 
 #include <cmath>
 
@@ -75,4 +74,3 @@ double N(double a) {
 
 
 
-#endif

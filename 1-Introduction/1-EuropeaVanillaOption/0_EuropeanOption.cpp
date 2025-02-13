@@ -1,6 +1,3 @@
-#ifndef VANILLA_OPTION_CPP_
-#define VANILLA_OPTION_CPP_
-
 #include "0_EuropeanOption.h"
 #include <cmath>
 
@@ -76,6 +73,3 @@ double VanillaOption::calculate_put_price() const {
   return 0.0;
 
 }
-
-
-#endif
