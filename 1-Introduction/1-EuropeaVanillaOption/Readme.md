@@ -15,5 +15,6 @@ Volatility of the underlying, σ
 European vanilla call and put options are specified by their pay-off functions, f :
 
 • Call: fC (S) = max(S − K, 0)
+
 • Put: fP (S) = max(K − S, 0)
 
